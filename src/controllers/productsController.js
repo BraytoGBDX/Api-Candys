@@ -10,7 +10,7 @@ export const getAllProducts=(req,res)=>{
             res.render('../src/views/index',{products})
         }else{
             res.json({
-                status:"Products not found"
+                status:"Products not foundo"
             })
         }
     })
@@ -24,7 +24,7 @@ export const getOneProduct=(req,res)=>{
             res.render('../src/views/update',{products})
         }else{
             res.json({
-                status:"Product not found "
+                status:"Product not foundo "
             })
         }
     })
@@ -78,4 +78,8 @@ export const deleteProduct=(req,res)=>{
 
 export const loadUpdatePage=(req,res)=>{
     res.render('../src/views/update.ejs',{products})
+}
+
+export const formInsertCandy=(req,res)=>{
+    res.render('../src/views/insertCandy.ejs')
 }

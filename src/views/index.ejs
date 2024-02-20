@@ -14,55 +14,71 @@
 <body>
     <div data-role="page" data-theme="b">
         <div data-role="header">
-            <h1>Abarrotes TIC</h1>
+            <h1>Abarrotes Brayzzo</h1>
         </div>
         <div data-role="content">
-            <form action="/" method="post">
-                <input type="text" name="barcode" placeholder="Código de barras">
-                <input type="text" name="description" placeholder="Descripcion">
-                <input type="text" name="brand" placeholder="Marca">
-                <input type="number" name="price" placeholder="Precio de compra">
-                <input type="number" name="cost" placeholder="Precio de venta">
-                <input type="number" name="stock" placeholder="Existencias">
-                <input type="date" name="expiredDate" placeholder="Caducidad">
-                <select name="status" data-role="slider" data-mini="true">
-                         <option value="0">No</option>
-                         <option value="1">Si</option>
-                </select>
-                <button type="submit" id="submit-8" class="ui-shadow ui-btn ui-corner-all ui-mini">Guardar producto</button>
-            </form>
-            <form>
-                    <input data-type="search" id="searchForCollapsibleSetChildren">
-            </form>
-                <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
-                <% products.forEach((product)=>{%>
-                        <div data-role="collapsible" data-filtertext="<%= product.description %> <%= product.barcode %> ">
-                            <h1><%= product.description %></h1>
-                            <ul data-role="listview" data-inset="false">
-                                <li data-filtertext="<%= product.barcode %>">Código de barras: <%= product.barcode %></li>
-                                <li>Marca: <%= product.brand %></li>
-                                <li>Precio de compra: <%= product.price %></li>
-                                <li>Existencias: <%= product.stock %></li>
-                                <li>Fecha de caducidad: <%= product.expiredDate %></li>
-                                <li>Estatus: <% if (product.status == 1) { %>
-                                    <h1>Disponible</h1>
-                                <% } else { %>
-                                    <h1>No Disponible</h1>
-                                <% } %></li>
-                                
-                            </ul>
-                            <br>
-                            
-                            <a href="<%= product.barcode %>" class="ui-btn">Editar</a>
-                            <form action="/delete/<%= product.barcode %>" method="get">
-                                <button type="submit" id="submit-8" class="ui-shadow ui-btn ui-corner-all ui-mini">Eliminar</button>
-                            </form>
+
+            <div class="ui-grid-d center" style="text-align: center;">
+                    <div class="ui-block-a"><a class="ui-shadow ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                    <div class="ui-block-b"><a href="/insertCandy" class="ui-shadow ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                    <div class="ui-block-c"><a class="ui-shadow ui-btn ui-corner-all ui-icon-grid ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                    <div class="ui-block-d"><a class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                    <div class="ui-block-e"><a class="ui-shadow ui-btn ui-corner-all ui-icon-gear ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                </div>
 
 
-                        </div>
-                
-                    
-                <% }) %>
+                <div data-role="content">
+
+                    <div class="ui-grid-b">
+                        <!-- First Card -->
+                        <div class="ui-block-a">
+                            <div class="ui-card ui-shadow">
+                                <div class="ui-card-header">
+                                    <h2>Card Title 1</h2>
+                                </div>
+                                <div class="ui-card-content">
+                                    <p>Content for card 1.</p>
+                                </div>
+                                <div class="ui-card-footer">
+                                    <p>Footer content for card 1.</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="ui-block-b">
+                            <div class="ui-card ui-shadow">
+                                <div class="ui-card-header">
+                                    <h2>Card Title 2</h2>
+                                </div>
+                                <div class="ui-card-content">
+                                    <p>Content for card 2.</p>
+                                </div>
+                                <div class="ui-card-footer">
+                                    <p>Footer content for card 2.</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="ui-block-c">
+                            <div class="ui-card ui-shadow">
+                                <div class="ui-card-header">
+                                    <h2>Card Title 3</h2>
+                                </div>
+                                <div class="ui-card-content">
+                                    <p>Content for card 3.</p>
+                                </div>
+                                <div class="ui-card-footer">
+                                    <p>Footer content for card 3.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+            
+                </div>  
+
+
+            
             </div>
         <div data-role="footer">
             <h5>Developed by BraytoGBDX</h5>
