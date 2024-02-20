@@ -1,13 +1,13 @@
-import producDAO from "../dao/productsDao.js";
+import candysDAO from "../dao/candysDao.js";
 
 const C = console.log.bind(console.log)
 
 
-export const getAllProducts=(req,res)=>{
-    producDAO.getAll()
-    .then(products=>{
-        if(products!=null){
-            res.render('../src/views/index',{products})
+export const getAllCandys=(req,res)=>{
+    candysDAO.getAll()
+    .then(candy=>{
+        if(candy!=null){
+            res.render('../src/views/index.ejs',{candy})
         }else{
             res.json({
                 status:"Products not foundo"
@@ -18,7 +18,7 @@ export const getAllProducts=(req,res)=>{
 };
 
 export const getOneProduct=(req,res)=>{
-    producDAO.getOne(req.params.barcode)
+    candysDAO.getOne(req.params.barcode)
     .then(products=>{ 
         if(products!=null){
             res.render('../src/views/update',{products})
@@ -33,10 +33,10 @@ export const getOneProduct=(req,res)=>{
     }))
 }
 
-export const insertProduct=(req,res)=>{
-producDAO.insertProduct(req.body)
-.then(result=>{
-    if(result){
+export const insertCandy=(req,res)=>{
+candysDAO.insertcandy(req.body)
+.then(candys=>{
+    if(candys!=null){
         res.redirect('/')//redirecciona a la raiz
     }
 })
@@ -48,7 +48,7 @@ producDAO.insertProduct(req.body)
 }
 
 export const updateProduct=(req,res)=>{
-    producDAO.updateProduct(req.params.barcode,req.body)
+    candysDAO.updateProduct(req.params.barcode,req.body)
     .then(result=>{
         if(result){
             res.redirect('/')
@@ -62,7 +62,7 @@ export const updateProduct=(req,res)=>{
 }
 
 export const deleteProduct=(req,res)=>{
-    producDAO.deleteProduct(req.params.barcode)
+    candysDAO.deleteProduct(req.params.barcode)
     .then(result=>{
         if(result){
             res.redirect('/')//redirecciona a la raiz

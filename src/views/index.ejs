@@ -29,50 +29,36 @@
 
                 <div data-role="content">
 
-                    <div class="ui-grid-b">
-                        <!-- First Card -->
-                        <div class="ui-block-a">
-                            <div class="ui-card ui-shadow">
-                                <div class="ui-card-header">
-                                    <h2>Card Title 1</h2>
-                                </div>
-                                <div class="ui-card-content">
-                                    <p>Content for card 1.</p>
-                                </div>
-                                <div class="ui-card-footer">
-                                    <p>Footer content for card 1.</p>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="ui-block-b">
-                            <div class="ui-card ui-shadow">
-                                <div class="ui-card-header">
-                                    <h2>Card Title 2</h2>
-                                </div>
-                                <div class="ui-card-content">
-                                    <p>Content for card 2.</p>
-                                </div>
-                                <div class="ui-card-footer">
-                                    <p>Footer content for card 2.</p>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="ui-block-c">
-                            <div class="ui-card ui-shadow">
-                                <div class="ui-card-header">
-                                    <h2>Card Title 3</h2>
-                                </div>
-                                <div class="ui-card-content">
-                                    <p>Content for card 3.</p>
-                                </div>
-                                <div class="ui-card-footer">
-                                    <p>Footer content for card 3.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <style>
+                        .ui-grid-b {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                        }
+                
+                        .ui-block {
+                            width: calc(33.33% - 10px); /* Ajusta el ancho según sea necesario y resta el margen */
+                            margin-bottom: 20px; /* Espaciado entre las filas */
+                        }
+                    </style>
 
+                    <div class="ui-grid-b">
+                        <% for (let i = 0; i < candy.length; i++) { %>
+                            <div class="ui-block">
+                                <div class="ui-card ui-shadow">
+                                    <div class="ui-card-header">
+                                        <h2><%= candy[i].description %></h2>
+                                    </div>
+                                    <div class="ui-card-content">
+                                        <p>Brand: <%= candy[i].brand %></p>
+                                        <p>Price: <%= candy[i].price %></p>
+                                    </div>
+                                    <div class="ui-card-footer">
+                                        <p>Stock: <%= candy[i].stock %></p>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %>
                     </div>
             
                 </div>  

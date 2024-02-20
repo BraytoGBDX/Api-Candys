@@ -1,11 +1,7 @@
 import { Schema,model } from "mongoose";
 
-const productSchema = new Schema({
-    barcode:{
-        type:String,
-        unique:true,
-        required:true
-    },
+const candysSchema = new Schema({
+    barcode:String,
     description:String,
     brand:String,
     price:Number,
@@ -20,4 +16,4 @@ const productSchema = new Schema({
 
 )
 
-export default model('products', productSchema);
+export default model('candys', candysSchema);
