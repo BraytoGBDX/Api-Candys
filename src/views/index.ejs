@@ -18,12 +18,11 @@
         </div>
         <div data-role="content">
 
-            <div class="ui-grid-d center" style="text-align: center;">
-                    <div class="ui-block-a"><a class="ui-shadow ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-inline">Button</a></div>
-                    <div class="ui-block-b"><a href="/insertCandy" class="ui-shadow ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Button</a></div>
-                    <div class="ui-block-c"><a class="ui-shadow ui-btn ui-corner-all ui-icon-grid ui-btn-icon-notext ui-btn-inline">Button</a></div>
-                    <div class="ui-block-d"><a class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext ui-btn-inline">Button</a></div>
-                    <div class="ui-block-e"><a class="ui-shadow ui-btn ui-corner-all ui-icon-gear ui-btn-icon-notext ui-btn-inline">Button</a></div>
+            <div class="ui-grid-b center" style="text-align: center;">
+                <div class="ui-block-a"><a class="ui-shadow ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                <div class="ui-block-b"><a href="/insert/insertCandy" class="ui-shadow ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                <div class="ui-block-b"><a href="/viewCart/Cart" class="ui-shadow ui-btn ui-corner-all ui-icon-shop ui-btn-icon-notext ui-btn-inline">Button</a></div>
+
                 </div>
 
 
@@ -56,6 +55,12 @@
                                     <div class="ui-card-footer">
                                         <p>Stock: <%= candy[i].stock %></p>
                                     </div>
+
+                                    <div class="ui-block-c"><a href="/<%= candy[i].barcode %>" class="ui-shadow ui-btn ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                    <div class="ui-block-c"><a href="/delete/<%= candy[i].barcode %>" class="ui-shadow ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                                    <a href="/addToCart/<%= candy[i].barcode %>" class="ui-shadow ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Add to Cart</a>
+
+
                                 </div>
                             </div>
                         <% } %>

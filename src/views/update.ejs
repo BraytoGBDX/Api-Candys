@@ -17,26 +17,56 @@
             <h1>Abarrotes TIC</h1>
         </div>
         <div data-role="content">
-            <form action="/<%= products.barcode %>" method="post">
-                <input type="hidden" name="_method" value="PUT">
-                <input type="text" name="barcode" placeholder="Código de barras" value="<%= products.barcode %>">
-                <input type="text" name="description" placeholder="Descripcion" value="<%= products.description%>">
-                <input type="text" name="brand" placeholder="Marca" value="<%= products.brand %>">
-                <input type="number" name="price" placeholder="Precio de compra" value="<%= products.price %>">
-                <input type="number" name="cost" placeholder="Precio de venta" value="<%= products.cost %>">
-                <input type="number" name="stock" placeholder="Existencias" value="<%= products.stock %>">
-                <input type="date" name="expiredDate" placeholder="Caducidad" value="<%= products.expiredDate %>">
-                <select name="status" data-role="slider" data-mini="true" defaultvalue="<%= products.status %>">
-                    <% if (products.status == 1) { %>
-                        <option value="0">No</option>
-                         <option value="1" selected>Si</option>
-                        <% } else { %>
-                        <option value="0" selected>No</option>
-                        <option value="1" >Si</option>         
-                    <% } %>
+            <div data-role="content">
+                <form action="/<%= candy.barcode %>" method="post">
+                    <div class="ui-field-contain">
+                    <label for="textinput-fc">Codigo:</label>
+                    <input type="text" name="barcode" placeholder="Código de barras" value="<%= candy.barcode %>">
+                </div>
+
+                    <div class="ui-field-contain">
+                        <label for="textinput-fc">Descripcion:</label>
+                        <input type="text" name="description" placeholder="Descripcion" value="<%= candy.description%>">
+                    </div>
+
+                        <div class="ui-field-contain">
+                            <label for="textinput-fc">Marca:</label>
+                            <input type="text" name="brand" placeholder="Marca" value="<%= candy.brand %>">
+                        </div>
                     
-                        
-                </select>
+                        <div class="ui-field-contain">
+                            <label for="textinput-fc">Precio compra:</label>
+                            <input type="number" name="price" placeholder="Precio de compra" value="<%= candy.price %>">
+                        </div>
+                    
+                        <div class="ui-field-contain">
+                            <label for="textinput-fc">Pecio de venta:</label>
+                            <input type="number" name="cost" placeholder="Precio de venta" value="<%= candy.cost %>">
+                        </div>
+
+                        <div class="ui-field-contain">
+                            <label for="textinput-fc">Existencias:</label>
+                            <input type="number" name="stock" placeholder="Existencias" value="<%= candy.stock %>">
+                        </div>
+
+                        <div class="ui-field-contain">
+                            <label for="textinput-fc">Fecha de caducidad:</label>
+                            <input type="date" name="expiredDate" placeholder="Caducidad" value="<%= candy.expiredDate %>">
+                        </div>
+                        <select name="status" data-role="slider" data-mini="true" defaultvalue="<%= candy.status %>">
+                            <% if (candy.status == 1) { %>
+                                <option value="0">No</option>
+                                <option value="1" selected>Si</option>
+                                <% } else { %>
+                                <option value="0" selected>No</option>
+                                <option value="1" >Si</option>         
+                            <% } %>
+                        </select>
+                    
+
+                        <input type="hidden" name="_method" value="PUT">
+                
+                
                 <button type="submit" id="submit-8" class="ui-shadow ui-btn ui-corner-all ui-mini">Guardar producto</button>
             </form>
             

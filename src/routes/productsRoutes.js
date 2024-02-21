@@ -1,15 +1,20 @@
 import { Router } from "express";
-import { deleteProduct, formInsertCandy, updateProduct, getAllCandys, insertCandy } from "../controllers/productsController.js";
+import { deleteProduct, formInsertCandy, updateProduct, getAllCandys, insertCandy, getOneProduct, addToCart, viewCart, deleteProductCart } from "../controllers/productsController.js";
 const router=Router()
 
 router.get('/',getAllCandys)
-// router.get('/:barcode',getOneProduct)
-router.post('/',insertCandy)
-router.post('/:barcode',updateProduct)
-router.get('/delete/:barcode',deleteProduct)
+router.get('/:candybc',getOneProduct)
+router.post('/insert',insertCandy)
+router.post('/:candybc',updateProduct)
+router.get('/delete/:candybc',deleteProduct)
+
+router.get('/insert/insertCandy',formInsertCandy)
+router.get('/addToCart/:candybc', addToCart);
 
 
-router.get('/insertCandy',formInsertCandy)
+router.get('/viewCart/Cart', viewCart);
+router.get('/deleteCart/:cartbc',deleteProductCart)
+
 
 
 

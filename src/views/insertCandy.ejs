@@ -18,54 +18,51 @@
         </div>
         <div data-role="content">
 
-            <div class="ui-grid-d center" style="text-align: center;">
-                    <div class="ui-block-a"><a href="/" class="ui-shadow ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-inline">Button</a></div>
-                    <div class="ui-block-b"><a class="ui-shadow ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Button</a></div>
-                    <div class="ui-block-c"><a class="ui-shadow ui-btn ui-corner-all ui-icon-grid ui-btn-icon-notext ui-btn-inline">Button</a></div>
-                    <div class="ui-block-d"><a class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext ui-btn-inline">Button</a></div>
-                    <div class="ui-block-e"><a class="ui-shadow ui-btn ui-corner-all ui-icon-gear ui-btn-icon-notext ui-btn-inline">Button</a></div>
+            <div class="ui-grid-b center" style="text-align: center;">
+                <div class="ui-block-a"><a href="/" class="ui-shadow ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-inline">Button</a></div>
+                <div class="ui-block-b"><a class="ui-shadow ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Button</a></div>
                 </div>
             </div>
 
             <div data-role="content">
-                <form action="/" method="post">
+                <form action="/insert" method="post">
                     <div class="ui-field-contain">
-                        <label for="textinput-fc">Codigo:</label>
-                        <input type="text" name="barcode" placeholder="Codigo de barras">
+                    <label for="textinput-fc">Codigo:</label>
+                    <input type="text" name="barcode" placeholder="Codigo de barras">
                     </div>
 
                     <div class="ui-field-contain">
-                            <label for="textinput-fc">Descripcion:</label>
+                        <label for="textinput-fc">Descripcion:</label>
                         <input type="text" name="description" placeholder="Descripcion">
                         </div>
 
                         <div class="ui-field-contain">
-                                <label for="textinput-fc">Marca:</label>
+                            <label for="textinput-fc">Marca:</label>
                             <input type="text" name="brand" placeholder="Marca">
                         </div>
                     
                         <div class="ui-field-contain">
-                                <label for="textinput-fc">Precio compra:</label>
+                            <label for="textinput-fc">Precio compra:</label>
                             <input type="number" name="price" placeholder="Precio de compra">
                         </div>
                     
                         <div class="ui-field-contain">
-                                <label for="textinput-fc">Pecio de venta:</label>
+                            <label for="textinput-fc">Pecio de venta:</label>
                             <input type="number" name="cost" placeholder="Precio de venta">
                         </div>
 
                         <div class="ui-field-contain">
-                                <label for="textinput-fc">Existencias:</label>
+                            <label for="textinput-fc">Existencias:</label>
                             <input type="number" name="stock" placeholder="Existencias">
                         </div>
 
                         <div class="ui-field-contain">
-                                <label for="textinput-fc">Fecha de caducidad:</label>
+                            <label for="textinput-fc">Fecha de caducidad:</label>
                             <input type="date" name="expiredDate" placeholder="Caducidad">
                         </div>
                         <select name="status" data-role="slider" data-mini="true">
-                                 <option value="0">No</option>
-                                 <option value="1">Si</option>
+                             <option value="0">No</option>
+                             <option value="1">Si</option>
                         </select>
                         <button type="submit" id="submit-8" class="ui-shadow ui-btn ui-corner-all ui-mini">Guardar Dulce</button>
 

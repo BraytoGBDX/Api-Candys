@@ -7,9 +7,9 @@ candysDAO.getAll = async()=>{
     return candy
 }
 
-candysDAO.getOne = async(barcodeCandy)=>{
-    const candys=await candys.findOne({barcode:barcodeCandy})
-    return candys
+candysDAO.getOne = async(candybc)=>{
+    const candy=await candys.findOne({barcode:candybc})
+    return candy
 }
 
 candysDAO.insertcandy=async(candy)=>{
@@ -18,8 +18,8 @@ candysDAO.insertcandy=async(candy)=>{
     return true
 }
 
-candysDAO.updatecandys=async(barcodeCandy,candy)=>{
-    const candyUpdated=await candys.findOneAndUpdate({barcode:barcodeCandy},candy)
+candysDAO.updatecandys=async(candybc,candy)=>{
+    const candyUpdated=await candys.findOneAndUpdate({barcode:candybc},candy)
     if(candyUpdated!=null){
         return true
     }else{
